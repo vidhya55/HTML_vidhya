@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('loginctrl', function($scope,$rootScope) {
+$scope.login=true;
+ $rootScope.home = false;
+     $scope.userName='';
+     $scope.pwd='';
+$scope.toggle=function(){
+   if($scope.userName=="prema" && $scope.pwd=="prema"){
+alert($rootScope.home);
+    $rootScope.home=true;
+    $scope.login=false;
+  }  }
+});
+app.controller('welctrl',function($scope){
+});
+</script>
+<body>
+<div  ng-controller="loginctrl" ng-show="login">
+User Name: <input type="text" ng-model="userName"><br>
+password: <input type="password" ng-model="pwd"><br>
+<br>
+<button ng-click="toggle()">submit</button>
+</div>
+
+
+<div ng-controller="welctrl" ng-show="home">
+<p >
+<h2>welcome to home page {{home}} </h2>
+</p>
+</div>
+
+
+</body>
+</html>

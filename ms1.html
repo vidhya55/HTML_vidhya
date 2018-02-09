@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<title>sony home page</title>
+<style>
+h1 
+{
+text-align:center;
+}
+header {
+    padding: 1px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.head img{
+float: left;
+  width: 100px;
+  height: 80px;
+  }
+  nav{
+  float:top-right;
+    max-width: 160px;
+    margin: 0;
+    padding: 1px;
+	}
+</style>
+</head>
+<body>
+<header>
+<div class="head">
+<img src="maxresdefault.jpg" alt="sony" style="float:left";>
+</div>
+
+<h1> make.believe</h1>
+</header>
+<article>
+<div class="slide">
+<img class="mySlides" src="0501-sony-psn-04-100616794-large.jpg" style="width:1200px">
+<img class="mySlides" src="download.jpg" style="width:1200px">
+<img class="mySlides" src="SG3_6297.jpg" style="width:1200px">
+<img class="mySlides" src="1513017063_sony-xperia-xz1-premium-release-date-specification-rumours.jpg" style="width:1200px">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); 
+}
+</script>
+<div class="container">
+<nav>
+  <ul>
+  <i>
+    <li><a href="sony xperia XA ultra dual.html">sony xperia XA ultra dual</a></li>
+<li><a href="sony xperia Z1.html">sony xperia Z1</a></li>
+<li><a href="sony xperia Z5 dual.html">sony xperia Z5 dual</a></li>
+<li><a href="sony xperia XA.html">sony xperia XA</a></li>
+<li><a href="sony xperia T2 ultra dual.html">sony xperia T2 ultra dual</a></li>
+</i>
+  </ul>
+</nav>
+</div>
+</body>
+<div class="footer">
+<footer>
+<h1>sony.com</h1>
+</footer>
+</article>
+</div>
+</body>
+</html>

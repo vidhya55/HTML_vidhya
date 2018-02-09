@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+<title>Online course</title>
+<h1><center><u>Registeration form</u></center></h1>
+<br>
+<br>
+<script src="angular.min.js"></script>
+<script>
+var app=angular.module('myapp',[]);
+app.controller('firstcont',function($scope,$rootScope){
+$scope.login=true;
+ $rootScope.home = false;
+$scope.Fname='';
+$scope.Lname='';
+$scope.address='';
+$scope.gender='';
+$scope.address='';
+$scope.number='';
+$scope.email='';
+$scope.toggle=function(){
+   if($scope.Fname=="vidhya" && $scope.Lname=="jeevanandham" && $scope.pwd=="vidhya"){
+alert($rootScope.home);
+    $rootScope.home=true;
+    $scope.login=false;
+  }  }}
+);
+app.controller('welcome',function($scope){
+});
+</script>
+<style>
+body{
+    background-image: url("122584470_LearningEssentials_616x418_tcm143-12125.png");
+	    background-repeat:no-repeat;
+		   background-size: 1500px 700px;
+}
+</style>
+</head>
+<body>
+<form>
+<center>
+<h3>
+<div ng-controller="firstcont" ng-show="login">
+Firstname:	<input type="text" ng-model="Fname" placeholder="Enter name here" required>
+<br>
+<br>
+Lasttname:	<input type="text" ng-model="Lname" placeholder="Enter name here" required>
+<br>
+<br>
+Gender:
+	<input type="radio" ng-model="gender" value="male">male
+	<input type="radio" ng-model="gender" value="female">female
+	<input type="radio" ng-model="gender" value="other">other<br>
+<br>
+Address:
+	<textarea rows="3" cols="30" ng-model="address" ng-model="address">
+</textarea>
+<br>
+<br>
+Mobile number:
+	<input type="number" ng-model="number">
+<br>
+<br>
+Email:
+	<input type="email" name="email" ng-model="email" required>
+	<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+	<span ng-show="myForm.email.$error.required">Email is required.</span>
+	<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+	</span>
+<br>
+<br>
+Qualification:	<select>
+	<option value="b.e">B.E</option>
+	<option value="m.e">M.E</option>
+	<option value="m.tech">M.Tech</option>
+	<option value="b.tech">B.Tech</option>
+	<option value="other">others</option>
+	</select><br>
+<br>
+Nationality:
+	<input type="text" name="">
+<br>
+<br>
+password:	<input type="password" ng-model="pwd"><br>
+<br>
+<button ng-click="toggle()">submit</button>
+<br>
+</div>
+<div ng-controller="welcome" ng-show="home">
+<center><b><h2>registration completed </h2></b></center>
+</div>
+</h3>
+<br>
+<br>
+</form>
+</center>
+</body>
+</html>
